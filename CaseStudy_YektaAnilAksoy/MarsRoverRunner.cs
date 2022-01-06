@@ -15,9 +15,9 @@ namespace CaseStudy_YektaAnilAksoy
         {
             foreach(char c in instructions)
             {
-                rover.runInstruction(c);
+                rover.RunInstruction(c);
             }
-            rover.print();
+            rover.Print();
         }
 
         public static void Main(String[] args)

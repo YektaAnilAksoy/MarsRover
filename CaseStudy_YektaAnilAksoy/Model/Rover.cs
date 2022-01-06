@@ -21,15 +21,15 @@ namespace MarsRover.Model
             this.coordinate = coordinate;
         }
 
-        public void runInstruction(char inst)
+        public void RunInstruction(char inst)
         {
             if(inst == 'L')
             {
-                turnLeft();
+                TurnLeft();
             }
             else if(inst == 'R')
             {
-                turnRight();
+                TurnRight();
             }
             else if(inst == 'M')
             {
@@ -50,9 +50,9 @@ namespace MarsRover.Model
             }
         }
 
-        public void turnLeft()
+        public void TurnLeft()
         {
-            if((int)direction == 0)
+            if(direction == Direction.N)
             {
                 direction = Direction.W;
             }
@@ -62,9 +62,9 @@ namespace MarsRover.Model
             }
         }
 
-        public void turnRight()
+        public void TurnRight()
         {
-            if ((int)direction == 3)
+            if (direction == Direction.W)
             {
                 direction = Direction.N;
             }
@@ -74,7 +74,7 @@ namespace MarsRover.Model
             }
         }
 
-        public void print()
+        public void Print()
         {
             Console.WriteLine(String.Format("Final Coordinate: ({0},{1} {2})", coordinate.x, coordinate.y, direction));
         }
